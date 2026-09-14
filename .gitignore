@@ -1,25 +1,25 @@
-# Python
+# Virtual environments
+venv/
+.venv/
+env/
 
-
-# Virtual environment
-
-
-# Environment variables
-
+# Python cache
+__pycache__/
+*.py[cod]
 
 # IDE
+.vscode/
+.idea/
 
+# OS files
+.DS_Store
+Thumbs.db
 
-# OS
-
-
-# Data
-
-
-# Models
-
+# Environment / secrets
+.env
 
 # Logs
+*.log
 
-
-# Temporary
+# Temporary files
+*.tmp

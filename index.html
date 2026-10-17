@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Recency-aware, explainable machine learning for short-term forecasting of Indian equities.">
+<title>India Stock Lens - Explainable Stock Prediction &amp; Analysis for NSE Equities</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="ticker">Forecasting NSE-listed equities with recency-aware machine learning</div>
+
+<header class="top">
+  <div class="wrap">
+    <nav id="nav">
+      <a href="#" class="logo"><i></i>India Stock Lens</a>
+      <div class="links">
+        <a href="#">Home</a><a href="#predict">Predict</a><a href="#analysis">Analysis</a>
+        <a href="#news">News</a><a href="#team">Team</a><a href="#learn">Learn</a><a href="#about">About</a>
+      </div>
+      <div class="auth">
+        <a href="#login" class="btn">Login</a>
+        <a href="#signup" class="btn primary">Sign Up</a>
+      </div>
+      <button class="menu-btn" id="menu" aria-label="Toggle menu">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="badge">Explainable ML for Indian Equities</span>
+        <h1>Make smarter investment decisions with India Stock Lens</h1>
+        <p>Predict next-day returns, closing prices and direction for NSE-listed stocks. Our models train on the most recent market data, so forecasts reflect today's market regime, not outdated history.</p>
+        <div class="cta-row">
+          <a href="#predict" class="btn light">Start Predicting</a>
+          <a href="#learn" class="btn ghost-light">Learn More</a>
+        </div>
+      </div>
+      <aside class="panel" aria-label="Platform summary">
+        <h4>Platform at a glance</h4>
+        <div class="stat"><span>Market coverage</span><b>NSE equities</b></div>
+        <div class="stat"><span>Training windows compared</span><b>30 / 60 / 90 days</b></div>
+        <div class="stat"><span>Models</span><b>Linear · Random Forest · XGBoost</b></div>
+        <div class="stat"><span>Risk levels</span><b>Low / Medium / High</b></div>
+      </aside>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Why choose India Stock Lens?</h2>
+        <p>Financial markets are non-stationary. We combine recency-aware training with transparent, explainable outputs so you can see why a forecast was made.</p>
+      </div>
+      <div class="grid" id="features"></div>
+    </div>
+  </section>
+
+  <section class="alt" id="predict">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Live stock predictions</h2>
+        <p>Next-day forecasts for leading NSE stocks, with target prices in Indian rupees, confidence and model-based risk.</p>
+      </div>
+      <div class="pred-grid" id="preds"></div>
+      <p class="note">Figures shown are illustrative sample data. Connect this section to your Flask API to display live model output.</p>
+      <div class="center"><a href="#predict" class="btn primary">View All Predictions</a></div>
+    </div>
+  </section>
+
+  <section id="learn">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How it works</h2>
+        <p>A modular pipeline built around chronological validation and strict time boundaries.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Data layer</h3><p>Local caching of NSE data with fallback mechanisms and stable datasets.</p></div>
+        <div class="step"><h3>Feature engineering</h3><p>Rolling volatility, MACD, ATR, plus NIFTY 50 and sector-level context, with no data leakage.</p></div>
+        <div class="step"><h3>Recency experiments</h3><p>30, 60 and 90-day training windows compared using time-series validation.</p></div>
+        <div class="step"><h3>Explainable output</h3><p>Ranked features, a 3-tier risk level and a regime-based reliability score.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Ready to transform your trading strategy?</h2>
+        <p>Explore recency-aware forecasts for Indian equities and see which factors drive each prediction.</p>
+        <div class="cta-row">
+          <a href="#signup" class="btn light">Get Started Free</a>
+          <a href="#analysis" class="btn ghost-light">Explore Analysis</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="about">
+  <div class="wrap">
+    <p><strong>India Stock Lens</strong> · Built by Tanmay Jain (Project Leader), Vinay Pandey, Yash Sharma and Sarthak Sundriyal</p>
+    <p>Dr. Akhilesh Das Gupta Institute of Professional Studies · tanmaybuddy7890@gmail.com</p>
+    <p>© 2025 India Stock Lens. This is an educational project and not professional financial advice.</p>
+    <p>Read the <a href="#terms">Terms and Conditions</a> and <a href="#privacy">Privacy Policy</a> carefully.</p>
+  </div>
+</footer>
+
+<!-- AI Stock Advisor (demo only: replies are canned; connect to your backend) -->
+<button id="chat-toggle" aria-label="Open AI Stock Advisor">💬</button>
+<div id="chat" role="dialog" aria-label="AI Stock Advisor">
+  <div class="chat-h">AI Stock Advisor</div>
+  <div id="msgs"><div class="m bot">I'll help you with stock analysis!</div></div>
+  <form id="chat-form">
+    <input id="q" placeholder="Ask about an NSE stock…" autocomplete="off">
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
